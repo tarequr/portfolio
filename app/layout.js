@@ -3,12 +3,12 @@ import "./globals.css";
 
 const outfit = Outfit({
   subsets: ["latin"],
-  weights: ["400", "500", "600","700"],
+  weight: ["400", "500", "600","700"],
 });
 
 const ovo = Ovo({
   subsets: ["latin"],
-  weights: ["400"],
+  weight: ["400"],
 });
 
 export const metadata = {
@@ -19,9 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${outfit.className} ${ovo.className} antialiased`}
-      >
+      <body className={`${outfit.className} ${ovo.className} antialiased`}>
         {children}
       </body>
     </html>
