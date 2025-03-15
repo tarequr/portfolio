@@ -11,7 +11,7 @@ const Navbar = () => {
             </a>
 
             <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3'>
-                <li><a href="#top" className='font-ovo'>Home</a></li>
+                <li><a href="#top" className='font-Ovo'>Home</a></li>
                 <li><a href="#about" className='font-Ovo'>About me</a></li>
                 <li><a href="#services" className='font-Ovo'>Services</a></li>
                 <li><a href="#work" className='font-Ovo'>My Work</a></li>
@@ -19,7 +19,7 @@ const Navbar = () => {
             </ul>
 
             <div>
-                <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4'>
+                <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo'>
                     Contact 
                     <Image src={assets.arrow_icon} alt='Contact' className='w-3'/>
                 </a>

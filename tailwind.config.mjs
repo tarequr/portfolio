@@ -14,7 +14,7 @@ module.exports = {
       },
       fontFamily: {
         outfit: ["Outfit", "sans-serif"],
-        ovo: ["Ovo", "serif"],
+        Ovo: ["Ovo", "serif"],
       },
     },
   },
