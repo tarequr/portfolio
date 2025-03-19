@@ -1,4 +1,4 @@
-import { assets, infoList } from '@/assets/assets'
+import { assets, infoList, toolsData } from '@/assets/assets'
 
 import Image from 'next/image'
 import React from 'react'
@@ -27,6 +27,15 @@ const About = () => {
                             <h3 className='my-4 font-semibold text-gray-700'>{title}</h3>
                             <p className='text-gray-600 text-sm'>{description}</p>
                       </li>
+                    ))}
+                </ul>
+
+                <h4 className='my-6 text-gray-700 font-Ovo'>Tools I Use</h4>
+                <ul className='flex items-center gap-3 sm:gap-5'>
+                    {toolsData.map((tool, index) => (
+                        <li key={index} className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'>
+                            <Image src={tool} alt={tool} className='w-5 sm:w-7' />
+                        </li>
                     ))}
                 </ul>
             </div>
