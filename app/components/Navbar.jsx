@@ -2,7 +2,7 @@ import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 
-const Navbar = () => {
+const Navbar = ({isDarkMode, setIsDarkMode}) => {
     const [isScroll, setIsScroll] = useState(false);
     const sideMenuRef = useRef();
     const openSideMenu = () => {
@@ -24,10 +24,10 @@ const Navbar = () => {
     },[]);
   return (
     <>
-        <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-88%]'>
+        <div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-88%] dark:hidden'>
             <Image src={assets.header_bg_color} alt='Header' className='w-full'/>
         </div>
-        <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white  bg-opacity-50 backdrop-blur-lg shadow-sm" : ""}`}>
+        <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white  bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20" : ""}`}>
             <a href="#top">
                 <Image src={assets.logo} alt='Logo' className='w-28 cursor-pointer mr-14'/>
             </a>
@@ -41,8 +41,8 @@ const Navbar = () => {
             </ul>
 
             <div className='flex items-center gap-4'>
-                <button>
-                    <Image src={assets.moon_icon} alt='Moon icon' className='w-6'/>
+                <button onClick={() => setIsDarkMode(!isDarkMode)}>
+                    <Image src={ isDarkMode ? assets.sun_icon : assets.moon_icon} alt='Moon icon' className='w-6'/>
                 </button>
 
                 <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo'>
