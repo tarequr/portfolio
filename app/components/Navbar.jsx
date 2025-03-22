@@ -45,13 +45,13 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                     <Image src={ isDarkMode ? assets.sun_icon : assets.moon_icon} alt='Moon icon' className='w-6'/>
                 </button>
 
-                <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo'>
+                <a href="#contact" className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo dark:border-white/50'>
                     Contact 
-                    <Image src={assets.arrow_icon} alt='Contact' className='w-3'/>
+                    <Image src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon} alt='Contact' className='w-3'/>
                 </a>
 
                 <button className='block md:hidden ml-3'>
-                    <Image src={assets.menu_black} alt='Moon icon' className='w-6' onClick={openSideMenu}/>
+                    <Image src={isDarkMode ? assets.menu_white : assets.menu_black} alt='Moon icon' className='w-6' onClick={openSideMenu}/>
                 </button>
             </div>
 
